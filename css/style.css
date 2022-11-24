@@ -1,9 +1,23 @@
+body {
+  font-family: "Open Sans", "Open Sans Light", sans-serif;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+:root {
+  --hue: 223;
+  --bg: hsl(var(--hue), 10%, 100%);
+  --fg: hsl(var(--hue), 10%, 0%);
+  --primary: hsl(var(--hue), 90%, 55%);
+  --primaryT: hsla(var(--hue), 90%, 55%, 0);
+  --transDur: 0.3s;
 }
 button:hover, a:hover {
   cursor: pointer;
 }
+
 .clearfix::after {
   content: "";
   display: block;
@@ -51,6 +65,48 @@ html {
   font-size: 3rem;
   color: #fff;
 }
+
+a {
+  background-image: linear-gradient(
+          to right,
+          #f9d49a,
+          #f9d49a 50%,
+          #ffffff 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  bottom: 8px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+a:before {
+  content: '';
+  background: #f9d49a;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  background-position: 0;
+}
+
+a:hover::before {
+  width:100%;
+}
+/* Control */
+
 .controls_game, .controls_score {
   display: inline-block;
   width: 50%;
