@@ -12,11 +12,11 @@
     <div class="intro clearfix">
         <h1 class="intro_title"> 2048 </h1>
     </div>
-    <!-- /end intro -->
+
     <!-- controls -->
     <div class="controls clearfix">
         <div class="controls_game">
-            <button data-js="newGame" class="controls_game-btn"> New Game </button>
+            <button data-js="newGame" class="controls_game-btn"> New game </button>
         </div>
         <div class="controls_score">
             <span class="controls_score-label">Score </span>
@@ -24,27 +24,21 @@
             <span class="controls_score-text" data-js="score"> </span>
         </div>
     </div>
+
     <!-- gameboard -->
     <div id="touchGameboard" class="gameboard">
-        <div class="grid">
-        </div>
-        <div class="tile-container">
-        </div>
+        <div class="grid"></div>
+        <div class="tile-container"></div>
     </div>
-    <!-- /end gameboard -->
+
     <!-- guide     -->
     <section class="guide clearfix">
         <h2> HOW TO PLAY </h2>
-        <p> Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!
-        </p>
+        <p> Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!</p>
         <p> To move the board, just swipe.</p>
-
-        <p> To win, get a 2048 tile.
-        </p>
+        <p> To win, get a 2048.</p>
     </section>
-    <!-- /end guide  -->
 </main>
-<!-- /end main  -->
 
 <!-- templates -->
 <script type="text/html" id="template_grid_cell">
@@ -59,6 +53,3 @@
 
 <script src="game.js"></script>
 </body>
-
-
-<!-- /end templates -->
